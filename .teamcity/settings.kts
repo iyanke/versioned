@@ -38,6 +38,7 @@ project {
 
 object Versioned6testConfig : BuildType({
     name = "versioned6_test config"
+    description = "description"
 
     params {
         param("param1", "test")
