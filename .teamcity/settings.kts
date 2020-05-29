@@ -40,6 +40,8 @@ object Versioned6testConfig : BuildType({
     name = "versioned6_test config"
     description = "description"
 
+    buildNumberPattern = "%build.counter%1"
+
     params {
         param("param1", "test")
     }
