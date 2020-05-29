@@ -32,7 +32,7 @@ project {
 
     params {
         password("system.pass88", "credentialsJSON:dbd4f01c-6f7b-4713-9395-99ad5870d0bf")
-        password("pass234", "credentialsJSON:032a32b6-8e95-49a7-bd2e-99a5f5c025b3")
+        password("pass234", "credentialsJSON:dbd4f01c-6f7b-4713-9395-99ad5870d0bf")
     }
 }
 
