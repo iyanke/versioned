@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2020.1/project-config.xsd">
+  <name>Versioned6</name>
+  <parameters>
+    <param name="pass234" value="credentialsJSON:032a32b6-8e95-49a7-bd2e-99a5f5c025b3" spec="password" />
+    <param name="system.pass88" value="credentialsJSON:dbd4f01c-6f7b-4713-9395-99ad5870d0bf" spec="password" />
+  </parameters>
+  <project-extensions>
+    <extension id="PROJECT_EXT_1" type="versionedSettings">
+      <parameters>
+        <param name="buildSettings" value="PREFER_VCS" />
+        <param name="credentialsStorageType" value="credentialsJSON" />
+        <param name="enabled" value="true" />
+        <param name="rootId" value="Versioned6_HttpsGithubComIyankeVersioned" />
+        <param name="showChanges" value="false" />
+      </parameters>
+    </extension>
+  </project-extensions>
+  <cleanup />
+</project>
+
