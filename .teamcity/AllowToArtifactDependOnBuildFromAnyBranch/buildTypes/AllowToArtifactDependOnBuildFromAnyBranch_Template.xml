@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="bd22f6b8-2308-4ed1-963e-888356699338" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2020.1/project-config.xsd">
+  <name>template</name>
+  <settings>
+    <disabled-settings>
+      <setting-ref ref="BUILD_EXT_40" />
+    </disabled-settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_178" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="echo template" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_183" name="fff" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="fff" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_185" name="rtrtr" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="ffg" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <build-extensions>
+      <extension id="BUILD_EXT_40" type="AutoMergeFeature">
+        <parameters>
+          <param name="teamcity.automerge.buildStatusCondition" value="successful" />
+          <param name="teamcity.automerge.dstBranch" value="&lt;default&gt;" />
+          <param name="teamcity.automerge.message" value="Merge branch '%teamcity.build.branch%'" />
+          <param name="teamcity.automerge.run.policy" value="runAfterBuildFinish" />
+          <param name="teamcity.automerge.srcBranchFilter" value="rr" />
+          <param name="teamcity.merge.policy" value="alwaysCreateMergeCommit" />
+        </parameters>
+      </extension>
+      <extension id="KEEP_RULE_80" type="keepRules">
+        <parameters>
+          <param name="filters.1.tagsList" value="template" />
+          <param name="filters.1.type" value="tags" />
+          <param name="keepData.1.type" value="everything" />
+          <param name="keepData.2.artifactsPatterns" value="+:**/*" />
+          <param name="keepData.2.type" value="artifacts" />
+          <param name="keepData.3.type" value="logs" />
+          <param name="keepData.4.type" value="history" />
+          <param name="keepData.5.type" value="statistics" />
+          <param name="limit.buildsCount" value="4" />
+          <param name="limit.type" value="keepLastNSuccessfulBuilds" />
+          <param name="preserveArtifacts" value="true" />
+          <param name="ruleDisabled" value="false" />
+        </parameters>
+      </extension>
+      <extension id="BUILD_EXT_43" type="JetBrains.FileContentReplacer">
+        <parameters>
+          <param name="teamcity.file.content.replacer.failBuild" value="true" />
+          <param name="teamcity.file.content.replacer.file.encoding" value="autodetect" />
+          <param name="teamcity.file.content.replacer.file.encoding.custom" value="autodetect" />
+          <param name="teamcity.file.content.replacer.pattern" value="template" />
+          <param name="teamcity.file.content.replacer.pattern.case.sensitive" value="true" />
+          <param name="teamcity.file.content.replacer.regexMode" value="REGEX" />
+          <param name="teamcity.file.content.replacer.replacement" value="template" />
+          <param name="teamcity.file.content.replacer.wildcards" value="x" />
+        </parameters>
+      </extension>
+    </build-extensions>
+    <cleanup />
+  </settings>
+</template>
+

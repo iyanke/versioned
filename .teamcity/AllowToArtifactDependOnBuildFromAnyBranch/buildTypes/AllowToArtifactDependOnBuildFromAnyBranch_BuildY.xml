@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="1c11e1c0-0ec7-435d-b64f-bda2d6beb40e" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2020.1/project-config.xsd">
+  <name>BuildY</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="**/*.*" />
+    </options>
+    <disabled-settings>
+      <setting-ref ref="ARTIFACT_DEPENDENCY_13" />
+    </disabled-settings>
+    <parameters>
+      <param name="teamcity.buildQueue.allowMerging" value="false" />
+      <param name="x" value="1" />
+    </parameters>
+    <build-runners />
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <build-extensions>
+      <extension id="KEEP_RULE_76" type="keepRules">
+        <parameters>
+          <param name="keepData.1.type" value="everything" />
+          <param name="keepData.2.artifactsPatterns" value="+:**/*" />
+          <param name="keepData.2.type" value="artifacts" />
+          <param name="keepData.3.type" value="logs" />
+          <param name="keepData.4.type" value="history" />
+          <param name="keepData.5.type" value="statistics" />
+          <param name="limit.type" value="all" />
+          <param name="preserveArtifacts" value="true" />
+          <param name="ruleDisabled" value="true" />
+        </parameters>
+      </extension>
+    </build-extensions>
+    <artifact-dependencies>
+      <dependency id="ARTIFACT_DEPENDENCY_13" sourceBuildTypeId="AllowToArtifactDependOnBuildFromAnyBranch_BuildX" cleanDestination="false">
+        <revisionRule name="lastSuccessful" revision="latest.lastSuccessful" branch="+:*&#xD;&#xA;-:&lt;default&gt;&#xD;&#xA;+:refs/heads/asasas&#xD;&#xA;+:refs/heads/e123&#xD;&#xA;+:refs/heads/errrr&#xD;&#xA;+:refs/heads/innayan&#xD;&#xA;+:refs/heads/innayan-patch-1&#xD;&#xA;+:refs/heads/innayan-patch-2&#xD;&#xA;+:refs/heads/innayan-patch-3&#xD;&#xA;+:refs/heads/qasasas&#xD;&#xA;+:refs/heads/te1&#xD;&#xA;+:refs/heads/te2" />
+        <artifact sourcePath="bbb.txt" />
+      </dependency>
+    </artifact-dependencies>
+    <cleanup />
+  </settings>
+</build-type>
+

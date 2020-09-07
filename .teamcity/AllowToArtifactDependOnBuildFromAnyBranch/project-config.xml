@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="c06a815c-c610-4a9f-af99-1a464a1ac9bf" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2020.1/project-config.xsd">
+  <name>Allow to artifact-depend on build from "any" branch</name>
+  <parameters>
+    <param name="444" value="2" />
+  </parameters>
+  <project-extensions>
+    <extension id="KEEP_RULE_72" type="keepRules">
+      <parameters>
+        <param name="keepData.1.type" value="everything" />
+        <param name="keepData.2.artifactsPatterns" value="+:**/*" />
+        <param name="keepData.2.type" value="artifacts" />
+        <param name="keepData.3.type" value="logs" />
+        <param name="keepData.4.type" value="history" />
+        <param name="keepData.5.type" value="statistics" />
+        <param name="limit.type" value="all" />
+        <param name="preserveArtifacts" value="true" />
+        <param name="ruleDisabled" value="false" />
+      </parameters>
+    </extension>
+    <extension id="KEEP_RULE_73" type="keepRules">
+      <parameters>
+        <param name="keepData.1.type" value="everything" />
+        <param name="keepData.2.artifactsPatterns" value="+:**/*" />
+        <param name="keepData.2.type" value="artifacts" />
+        <param name="keepData.3.type" value="logs" />
+        <param name="keepData.4.type" value="history" />
+        <param name="keepData.5.type" value="statistics" />
+        <param name="limit.type" value="all" />
+        <param name="preserveArtifacts" value="true" />
+        <param name="ruleDisabled" value="false" />
+      </parameters>
+    </extension>
+    <extension id="KEEP_RULE_75" type="keepRules">
+      <parameters>
+        <param name="keepData.1.artifactsPatterns" value="+:**/*hhh" />
+        <param name="keepData.1.type" value="artifacts" />
+        <param name="keepData.2.type" value="logs" />
+        <param name="limit.type" value="all" />
+        <param name="preserveArtifacts" value="true" />
+        <param name="ruleDisabled" value="false" />
+      </parameters>
+    </extension>
+    <extension id="KEEP_RULE_77" type="keepRules">
+      <parameters>
+        <param name="keepData.1.type" value="everything" />
+        <param name="limit.type" value="all" />
+        <param name="preserveArtifacts" value="true" />
+        <param name="ruleDisabled" value="true" />
+      </parameters>
+    </extension>
+    <extension id="KEEP_RULE_78" type="keepRules">
+      <parameters>
+        <param name="keepData.1.type" value="everything" />
+        <param name="limit.type" value="all" />
+        <param name="preserveArtifacts" value="true" />
+        <param name="ruleDisabled" value="true" />
+      </parameters>
+    </extension>
+    <extension id="KEEP_RULE_79" type="keepRules">
+      <parameters>
+        <param name="keepData.1.type" value="everything" />
+        <param name="keepData.2.artifactsPatterns" value="+:**/*" />
+        <param name="keepData.2.type" value="artifacts" />
+        <param name="keepData.3.type" value="logs" />
+        <param name="keepData.4.type" value="history" />
+        <param name="keepData.5.type" value="statistics" />
+        <param name="limit.type" value="all" />
+        <param name="preserveArtifacts" value="true" />
+        <param name="ruleDisabled" value="false" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_61" type="project-graphs">
+      <parameters>
+        <param name="format" value="text" />
+        <param name="series"><![CDATA[[
+  {
+    "type": "valueType",
+    "title": "Artifacts Size",
+    "sourceBuildTypeId": "AllowToArtifactDependOnBuildFromAnyBranch_BuildX",
+    "key": "VisibleArtifactsSize"
+  }
+]]]></param>
+        <param name="seriesTitle" value="Serie" />
+        <param name="title" value="New chart title" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_94" type="project-graphs">
+      <parameters>
+        <param name="format" value="text" />
+        <param name="series"><![CDATA[[
+  {
+    "type": "valueType",
+    "title": "Build Duration (all stages)",
+    "sourceBuildTypeId": "AllowToArtifactDependOnBuildFromAnyBranch_BuildY",
+    "key": "BuildDuration"
+  }
+]]]></param>
+        <param name="seriesTitle" value="Serie" />
+        <param name="title" value="New chart title" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_95" type="project-graphs.order">
+      <parameters>
+        <param name="order" value="_Root:SuccessRate,_Root:TestCount,_Root:MaxTimeToFixTestGraph,_Root:BuildDurationNetTime,_Root:TimeSpentInQueue,PROJECT_EXT_94,PROJECT_EXT_61" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_96" type="versionedSettings">
+      <parameters>
+        <param name="buildSettings" value="ALWAYS_USE_CURRENT" />
+        <param name="credentialsStorageType" value="credentialsJSON" />
+        <param name="enabled" value="true" />
+        <param name="rootId" value="AllowToArtifactDependOnBuildFromAnyBranch_HttpsGithubComIyankeVersioned" />
+        <param name="showChanges" value="false" />
+      </parameters>
+    </extension>
+  </project-extensions>
+  <cleanup />
+</project>
+

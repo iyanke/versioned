@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="AllowToArtifactDependOnBuildFromAnyBranch" uuid="c25a1b8d-45eb-4f4d-b5f6-ce6f0d1a1282" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2020.1/project-config.xsd">
+  <name>subpro</name>
+  <parameters />
+  <project-extensions>
+    <extension id="KEEP_RULE_71" type="keepRules">
+      <parameters>
+        <param name="filters.1.pattern"><![CDATA[+:*
+-:test1
+-:test1
+-:test1
+-:test1]]></param>
+        <param name="filters.1.type" value="branchSpecs" />
+        <param name="filters.2.status" value="successful" />
+        <param name="filters.2.type" value="buildStatus" />
+        <param name="filters.3.tagsList" value="project" />
+        <param name="filters.3.type" value="tags" />
+        <param name="keepData.1.type" value="statistics" />
+        <param name="limit.daysCount" value="30" />
+        <param name="limit.type" value="keepNDaysSinceLastSuccessfulBuild" />
+        <param name="partitions.1.type" value="perBranch" />
+        <param name="preserveArtifacts" value="true" />
+        <param name="ruleDisabled" value="false" />
+      </parameters>
+    </extension>
+  </project-extensions>
+  <cleanup />
+</project>
+

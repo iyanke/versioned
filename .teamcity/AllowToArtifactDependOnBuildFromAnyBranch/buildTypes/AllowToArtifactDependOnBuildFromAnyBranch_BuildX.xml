@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="0e6f9cfe-4630-45a7-a45c-db236609e1b6" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2020.1/project-config.xsd">
+  <name>BuildX</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="aaa.txt&#xA;ccc.txt&#xA;bbb.txt" />
+    </options>
+    <disabled-settings>
+      <setting-ref ref="BUILD_EXT_42" />
+      <setting-ref ref="BUILD_EXT_43" />
+      <setting-ref ref="RUNNER_178" />
+      <setting-ref ref="RUNNER_183" />
+      <setting-ref ref="RUNNER_185" />
+    </disabled-settings>
+    <parameters>
+      <param name="teamcity.buildQueue.allowMerging" value="false" />
+    </parameters>
+    <build-runners>
+      <runner id="RUNNER_178" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="echo template" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_183" name="fff" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="fff" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_185" name="rtrtr" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="ffg" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="AllowToArtifactDependOnBuildFromAnyBranch_HttpsGithubComInnayanMyrepository" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <build-extensions>
+      <extension id="BUILD_EXT_42" type="BuildFailureOnMetric">
+        <parameters>
+          <param name="anchorBuild" value="lastSuccessful" />
+          <param name="metricKey" value="VisibleArtifactsSize" />
+          <param name="metricThreshold" value="1" />
+          <param name="metricUnits" value="metricUnitsDefault" />
+          <param name="moreOrLess" value="more" />
+          <param name="withBuildAnchor" value="false" />
+        </parameters>
+      </extension>
+      <extension id="BUILD_EXT_43" type="JetBrains.FileContentReplacer">
+        <parameters>
+          <param name="teamcity.file.content.replacer.failBuild" value="true" />
+          <param name="teamcity.file.content.replacer.file.encoding" value="autodetect" />
+          <param name="teamcity.file.content.replacer.file.encoding.custom" value="autodetect" />
+          <param name="teamcity.file.content.replacer.pattern" value="template" />
+          <param name="teamcity.file.content.replacer.pattern.case.sensitive" value="true" />
+          <param name="teamcity.file.content.replacer.regexMode" value="REGEX" />
+          <param name="teamcity.file.content.replacer.replacement" value="template" />
+          <param name="teamcity.file.content.replacer.wildcards" value="x" />
+        </parameters>
+      </extension>
+      <extension id="KEEP_RULE_80" type="keepRules">
+        <parameters>
+          <param name="filters.1.tagsList" value="template" />
+          <param name="filters.1.type" value="tags" />
+          <param name="keepData.1.type" value="everything" />
+          <param name="keepData.2.artifactsPatterns" value="+:**/*" />
+          <param name="keepData.2.type" value="artifacts" />
+          <param name="keepData.3.type" value="logs" />
+          <param name="keepData.4.type" value="history" />
+          <param name="keepData.5.type" value="statistics" />
+          <param name="limit.buildsCount" value="4" />
+          <param name="limit.type" value="keepLastNSuccessfulBuilds" />
+          <param name="preserveArtifacts" value="true" />
+          <param name="ruleDisabled" value="true" />
+        </parameters>
+      </extension>
+      <extension id="KEEP_RULE_69" type="keepRules">
+        <parameters>
+          <param name="keepData.1.type" value="statistics" />
+          <param name="limit.type" value="all" />
+          <param name="preserveArtifacts" value="true" />
+          <param name="ruleDisabled" value="false" />
+        </parameters>
+      </extension>
+    </build-extensions>
+    <cleanup />
+  </settings>
+</build-type>
+

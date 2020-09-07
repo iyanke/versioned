@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="d3a87b75-8ea6-454e-9fa0-a3402037cb24" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2020.1/project-config.xsd">
+  <name>test</name>
+  <description />
+  <settings>
+    <disabled-settings>
+      <setting-ref ref="RUNNER_178" />
+      <setting-ref ref="RUNNER_183" />
+    </disabled-settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_183" name="fff3333" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="fff" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <build-extensions>
+      <extension id="KEEP_RULE_80" type="keepRules">
+        <parameters>
+          <param name="filters.1.tagsList" value="template" />
+          <param name="filters.1.type" value="tags" />
+          <param name="keepData.1.type" value="everything" />
+          <param name="keepData.2.artifactsPatterns" value="+:**/*" />
+          <param name="keepData.2.type" value="artifacts" />
+          <param name="keepData.3.type" value="logs" />
+          <param name="keepData.4.type" value="history" />
+          <param name="keepData.5.type" value="statistics" />
+          <param name="limit.buildsCount" value="4" />
+          <param name="limit.type" value="keepLastNSuccessfulBuilds" />
+          <param name="preserveArtifacts" value="true" />
+          <param name="ruleDisabled" value="true" />
+        </parameters>
+      </extension>
+    </build-extensions>
+    <cleanup />
+  </settings>
+</build-type>
+
