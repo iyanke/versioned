@@ -9,39 +9,35 @@
     <disabled-settings>
       <setting-ref ref="BUILD_EXT_42" />
       <setting-ref ref="BUILD_EXT_43" />
-      <setting-ref ref="RUNNER_178" />
-      <setting-ref ref="RUNNER_183" />
-      <setting-ref ref="RUNNER_185" />
     </disabled-settings>
     <parameters>
       <param name="teamcity.buildQueue.allowMerging" value="false" />
     </parameters>
     <build-runners>
-      <runner id="RUNNER_178" name="" type="simpleRunner">
+      <runner id="RUNNER_178" name="Windows step" type="jetbrains_powershell">
+        <conditions>
+          <equals name="teamcity.agent.jvm.os.name" value="Windows" />
+        </conditions>
         <parameters>
-          <param name="script.content" value="echo template" />
+          <param name="jetbrains_powershell_execution" value="STDIN" />
+          <param name="jetbrains_powershell_noprofile" value="true" />
+          <param name="jetbrains_powershell_script_code" value="Write-Host &quot;filesizecounter&quot;" />
+          <param name="jetbrains_powershell_script_mode" value="CODE" />
           <param name="teamcity.step.mode" value="default" />
-          <param name="use.custom.script" value="true" />
         </parameters>
       </runner>
-      <runner id="RUNNER_183" name="fff" type="simpleRunner">
+      <runner id="RUNNER_185" name="Linux step" type="simpleRunner">
+        <conditions>
+          <equals name="teamcity.agent.jvm.os.name" value="Linux" />
+        </conditions>
         <parameters>
-          <param name="script.content" value="fff" />
-          <param name="teamcity.step.mode" value="default" />
-          <param name="use.custom.script" value="true" />
-        </parameters>
-      </runner>
-      <runner id="RUNNER_185" name="rtrtr" type="simpleRunner">
-        <parameters>
-          <param name="script.content" value="ffg" />
+          <param name="script.content" value="echo test" />
           <param name="teamcity.step.mode" value="default" />
           <param name="use.custom.script" value="true" />
         </parameters>
       </runner>
     </build-runners>
-    <vcs-settings>
-      <vcs-entry-ref root-id="AllowToArtifactDependOnBuildFromAnyBranch_HttpsGithubComInnayanMyrepository" />
-    </vcs-settings>
+    <vcs-settings />
     <requirements />
     <build-triggers />
     <build-extensions>

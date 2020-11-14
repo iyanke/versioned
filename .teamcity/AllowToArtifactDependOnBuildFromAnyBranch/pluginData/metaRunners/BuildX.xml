@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<meta-runner name="BuildX">
+  <description>custom step</description>
+  <settings>
+    <parameters>
+      <param name="444" value="2" />
+      <param name="teamcity.buildQueue.allowMerging" value="false" />
+    </parameters>
+    <build-runners>
+      <runner name="" type="simpleRunner">
+        <conditions>
+          <equals name="teamcity.agent.jvm.os.name" value="Linux" />
+        </conditions>
+        <parameters>
+          <param name="script.content" value="echo template" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <requirements />
+  </settings>
+</meta-runner>
+

@@ -70,6 +70,13 @@
         <param name="ruleDisabled" value="false" />
       </parameters>
     </extension>
+    <extension id="PROJECT_EXT_35" type="JetBrains.SharedResources">
+      <parameters>
+        <param name="name" value="ee" />
+        <param name="quota" value="-1" />
+        <param name="type" value="quoted" />
+      </parameters>
+    </extension>
     <extension id="PROJECT_EXT_61" type="project-graphs">
       <parameters>
         <param name="format" value="text" />

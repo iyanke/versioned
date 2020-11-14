@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="21c1ab7b-b238-428d-a0de-dbdd68b0433e" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2020.1/project-config.xsd">
+  <name>Custom_Step_from_metarunner</name>
+  <description>Build configuration created from meta-runner BuildX</description>
+  <settings>
+    <parameters>
+      <param name="444" value="2" spec="text orderNumber='1.0'" />
+      <param name="teamcity.buildQueue.allowMerging" value="false" spec="text orderNumber='2.0'" />
+    </parameters>
+    <build-runners>
+      <runner id="BuildX_0" name="" type="simpleRunner">
+        <conditions>
+          <equals name="teamcity.agent.jvm.os.name" value="Linux" />
+        </conditions>
+        <parameters>
+          <param name="script.content" value="echo template" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+
